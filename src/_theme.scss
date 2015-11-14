@@ -1,0 +1,91 @@
+/* RightScale Theme Overrides */
+
+.header .user-nav {
+	margin: 0;
+  padding: 0;
+}
+
+.header .user-nav a {
+	color: #fff;
+  -webkit-transition: background-color 100ms;
+          transition: background-color 100ms;
+}
+
+.header .user-nav a:hover {
+  background-color: #005BBB;
+	text-decoration: none;
+}
+
+.header .user-nav .submit-a-request {
+  margin: 0;
+  line-height: 50px;
+  background: #0069CC;
+  padding: 18px 15px;
+}
+
+.header .logo img {
+  margin-top: 3px;
+	width: 216px;
+}
+
+.header .user-nav .dropdown-toggle {
+  background: transparent;
+  border: 0 none;
+  box-shadow: none;
+  color: #fff;
+  padding: 10px 15px;
+  height: 50px;
+}
+
+.header .user-nav .dropdown-toggle:hover {
+  background-color: #005BBB;
+}
+
+.header .user-nav .dropdown-toggle .user-avatar {
+  margin-right: 0px;
+}
+
+.header .user-nav .dropdown-toggle:after {
+  color: #fff;
+  margin-left: -4px;
+}
+
+.header .user-nav .dropdown-menu {
+  border-color: #d1d6dc;
+  border-bottom-color: #c5ccd3;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.header .user-nav .dropdown-menu-caret:before {
+  border-bottom: 7px solid #d1d6dc;
+}
+
+.header .user-nav .dropdown-menu a {
+  color: $color_5;
+}
+
+.header .user-nav .dropdown-menu a:hover {
+  background-color: #F1F1F1;
+  color: darken($color_5, 20);
+}
+
+.footer {
+  border-top: 1px solid #e2e5e9;
+  margin-top: 2.8em;
+  padding-bottom: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 14px;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+
+.footer-links > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}

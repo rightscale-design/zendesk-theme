@@ -1,0 +1,26 @@
+{
+  "name": "zendesk-theme",
+  "version": "1.0.0",
+  "description": "Templates and CSS for our Zendesk theme.",
+  "scripts": {
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rightscale-design/zendesk-theme.git"
+  },
+  "keywords": [
+    "zendesk"
+  ],
+  "author": "Jason Melgoza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rightscale-design/zendesk-theme/issues"
+  },
+  "homepage": "https://github.com/rightscale-design/zendesk-theme#readme",
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1"
+  }
+}

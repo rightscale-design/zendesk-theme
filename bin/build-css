@@ -1,0 +1,1 @@
+node-sass --output-style expanded --include-path scss index.scss spinners.css
