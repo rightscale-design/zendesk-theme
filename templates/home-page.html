@@ -1,0 +1,19 @@
+<section class="hero-unit">
+  <h1 class="help-center-name">{{help_center.name}}</h1>
+</section>
+<section class="clearfix">
+  <div class="knowledge-base">
+    {{category_tree_with_article}}
+  </div>
+  <div class="community">
+    {{#if help_center.community_enabled}}
+      <h4>
+        {{t 'community'}}
+        {{#link 'community'}}
+          {{t 'browse'}}
+        {{/link}}
+      </h4>
+    {{/if}}
+    {{recent_activity scope='community'}}
+  </div>
+</section>

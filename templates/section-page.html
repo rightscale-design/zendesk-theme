@@ -1,0 +1,31 @@
+<nav class="sub-nav clearfix">
+  <h1 class="help-center-name">{{help_center.name}}</h1>
+  {{search}}
+</nav>
+
+<section class="clearfix">
+  <h1>{{#if section.internal}}
+    <span class="visibility-internal" data-title="{{t 'internal'}}">
+      <span class="visibility-internal-icon"></span>
+    </span>
+  {{/if}} {{section.name}} {{subscribe}}</h1>
+  <p class="section-description">{{section.description}}</p>
+  {{#if section.articles}}
+    <ul class="article-list">
+      {{#each section.articles}}
+        <li {{#if promoted}} class="article-promoted" {{/if}}>
+          {{#if promoted}}
+            <span data-title="{{t 'promoted'}}">★</span>
+          {{/if}}
+          <a href="{{url}}">{{title}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <i class="section-empty">
+      <a href="{{section.url}}">{{t 'empty'}}</a>
+    </i>
+  {{/if}}
+
+  {{pagination}}
+</section>

@@ -1,0 +1,18 @@
+<nav class="sub-nav">
+  {{breadcrumbs}}
+</nav>
+
+<h1 class="page-header">
+  {{t 'submit_a_request'}}{{#if parent}}
+    <span class="follow-up-hint">
+      {{follow_up}}
+    </span>
+  {{/if}}
+</h1>
+
+<div class="form">
+
+  {{request_form}}
+</div>
+
+{{chat}}

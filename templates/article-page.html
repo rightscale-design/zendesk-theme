@@ -1,0 +1,103 @@
+<nav class="sub-nav clearfix">
+<h1 class="help-center-name">{{help_center.name}}</h1>
+  {{search}}
+</nav>
+
+<div class="clearfix">
+  <article class="main-column">
+    <div class="article-subscribe-wrapper">
+      {{subscribe}}
+    </div>
+    <div class="article-wrapper">
+    <header class="article-header clearfix">
+      <h1>{{#if article.internal}}
+        <span class="visibility-internal" data-title="{{t 'internal'}}">
+          <span class="visibility-internal-icon"></span>
+        </span>
+      {{/if}} {{article.title}}</h1>
+      <div class="article-metadata">
+        <div class="article-updated">{{date article.updated_at}}</div>
+        <div class="article-breadcrumbs">{{breadcrumbs}}</div>
+      </div>
+    </header>
+
+    <div class="article-body markdown">
+      {{article.body}}
+    </div>
+
+    <div class="article-attachments">
+      <ul class="attachments">
+        {{#each attachments}}
+          <li>
+            <a href="{{url}}" target="_blank">{{name}}</a>
+            <span>({{size}})</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+    <section class="article-comments">
+      <h2>{{t 'comments'}}</h2>
+      <div class="article-comments-inner">
+        {{#if comments}}
+          <ul id="comments" class="comment-list">
+            {{#each comments}}
+              <li id="{{anchor}}" class="comment">
+                <div class="comment-avatar {{#if author.agent}} comment-avatar-agent {{/if}}">
+                  <img src="{{author.avatar_url}}" alt="Avatar">
+                </div>
+                <div class="comment-container">
+                  <header class="comment-header">
+                    <strong class="comment-author">
+                      {{#if author.url}}
+                        <a href="{{author.url}}" target="_zendesk_lotus">{{author.name}}</a>
+                      {{else}}
+                        {{author.name}}
+                      {{/if}}
+                    </strong>
+                    <span class="comment-published">{{date created_at}}</span>
+                    {{#if pending}}
+                      <span class="comment-pending">{{t 'pending_approval'}}</span>
+                    {{/if}}
+                  </header>
+                  <div class="comment-body markdown">{{body}}</div>
+                  {{#if editor}}
+                    <div class="comment-edited meta">
+                      {{t 'comment_edited' editor_name=editor.name}} {{date edited_at timeago=true}}
+                    </div>
+                  {{/if}}
+                  <footer class="comment-footer">
+                    <span class="comment-actions">
+                      {{#with ticket}}
+                        <a href="{{url}}" target="_zendesk_lotus" class="escalation-badge">
+                          #{{id}}
+                        </a>
+                      {{/with}}
+                      {{actions}}
+                    </span>
+                  </footer>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{pagination}}
+        {{#form 'comment' class='comment-form'}}
+          <div class="comment-avatar">
+            {{user_avatar class='user-avatar'}}
+          </div>
+
+          <div class="comment-container">
+            {{textarea 'body' rows='4'}}
+            <div class="comment-form-controls">
+              {{input type='submit'}}
+            </div>
+          </div>
+        {{/form}}
+      </div>
+    </section>
+
+  </article>
+
+</div>
