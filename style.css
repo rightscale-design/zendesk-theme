@@ -45,7 +45,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color: #0769C6;
+  /*text-decoration: underline;*/
 }
 
 ul, ol {
@@ -505,7 +506,7 @@ main, .header-inner, .footer-inner {
 
 .help-center-name {
   float: left;
-  margin: 0 0 40px;
+  margin: 16px 0 40px;
   font-size: 34px;
   font-weight: bold;
   color: $color_3;
@@ -749,7 +750,7 @@ body.community-enabled .knowledge-base {
   border-color: rgba(0, 0, 0, 0.07);
   border-style: solid;
   border-width: 0 0 1px;
-  margin-bottom: 50px;
+  margin-bottom: 16px;
   height: 50px;
 }
 
@@ -1586,7 +1587,7 @@ body.community-enabled .knowledge-base {
   padding: 25px 0;
 }
 .my-activities-header .breadcrumbs li {
-  color: #000;
+  color: #57626C;
   font-size: 20px;
   font-weight: normal;
 }
@@ -2406,11 +2407,13 @@ body.community-enabled .search-results-column + .search-results-column {
 	text-decoration: none;
 }
 
-.header .user-nav .submit-a-request {
+.header .user-nav .submit-a-request,
+.header .user-nav .login {
   margin: 0;
-  line-height: 50px;
+  line-height: 14px;
   background: #0069CC;
   padding: 18px 15px;
+  border-radius: 0;
 }
 
 .header .logo img {
@@ -2459,9 +2462,14 @@ body.community-enabled .search-results-column + .search-results-column {
   color: darken($color_5, 20);
 }
 
+.hero-unit .help-center-name {
+  width: 100%;
+  text-align: center;
+}
+
 .footer {
   border-top: 1px solid #e2e5e9;
-  margin-top: 2.8em;
+  margin-top: 2.9em;
   padding-bottom: 14px;
   padding-left: 5px;
   padding-right: 5px;
@@ -2490,7 +2498,7 @@ body.community-enabled .search-results-column + .search-results-column {
   padding-right: 0;
 }
 
-.home .column div[class^="block-"] {
+.home .column div[class^="block-"] .btn {
   margin-bottom: 1rem;
 }
 
@@ -2605,6 +2613,10 @@ body.community-enabled .search-results-column + .search-results-column {
   border-bottom: 1px solid #054a8a;
 }
 
+.home .block-support .card {
+  margin-bottom: 15px;
+}
+
 .home .btn .btn-title {
   font-size: 18px;
   padding-bottom: 2px;
@@ -2662,4 +2674,8 @@ body.community-enabled .search-results-column + .search-results-column {
 .home .card-header {
   padding: .75rem 1.25rem;
   background-color: #fff;
+}
+
+.powered-by a {
+  text-indent: -99999px;
 }
